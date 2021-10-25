@@ -1,2 +1,0 @@
-# projeto flutter
-Agendamento society
