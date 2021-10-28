@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:boas_vindas/pages/pagina_boas_vindas.dart';
+import 'package:boas_vindas/pages/formulario.dart';
 
 class PaginaInicial extends StatelessWidget {
 
@@ -10,21 +10,34 @@ class PaginaInicial extends StatelessWidget {
 
     return Scaffold(
        body: 
+       decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("\Projeto\projeto\lib\img\papel-de-parede-futebol.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
        Center(child: 
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
             Text(
-              "Digite seu nome!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
+              "Agendamento Society Login!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
             ),
 
             SizedBox(height: 30),
 
             TextField(
-              controller: _textoNome,
+              controller: _textoEmail,
               decoration: new InputDecoration(
-                hintText: "Nome",
+                hintText: "Email",
+                contentPadding: EdgeInsets.all(10.0)
+              )
+
+              TextField(
+              controller: _textoSenha,
+              decoration: new InputDecoration(
+                hintText: "Senha",
                 contentPadding: EdgeInsets.all(10.0)
               )
             ),
@@ -41,7 +54,7 @@ class PaginaInicial extends StatelessWidget {
                 ));
               },
               child: Text(
-                "Enviar",
+                "Login",
                 style: TextStyle(color: Colors.black)
               )
             ),
